@@ -26,7 +26,6 @@ Turn the PSO demo into a general-purpose optimizer app where users can:
 - Extensible optimizer registry and adapter interfaces for third-party libraries.
 
 ## Product use-cases
-- Quick algorithm demo for interviews: show PSO behavior and a simple benchmark.
 - Research prototyping: define custom objectives and compare optimizers reproducibly.
 - Teaching & exploration: students experiment with formulas, parameters, and visualizations.
 - Small experiment server: programmatic API for sweeps and batch exports.
