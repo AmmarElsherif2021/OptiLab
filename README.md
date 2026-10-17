@@ -1,4 +1,4 @@
-# Optimization Playground
+# OptiLab Playground
 
 General-purpose, extensible optimizer app (demo + framework). reproducible playground where users paste mathematical objectives, declare variables/bounds, pick optimizers, run experiments, and visualize/export results.
 
