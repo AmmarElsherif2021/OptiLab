@@ -1,8 +1,8 @@
 # Optimization Playground
 
-General-purpose, extensible optimizer app (demo + framework). Turn the existing PSO demo into a recruiter-friendly, reproducible playground where users paste mathematical objectives, declare variables/bounds, pick optimizers, run experiments, and visualize/export results.
+General-purpose, extensible optimizer app (demo + framework). reproducible playground where users paste mathematical objectives, declare variables/bounds, pick optimizers, run experiments, and visualize/export results.
 
-## Goal (short)
+## Goal:
 Turn the PSO demo into a general-purpose optimizer app where users can:
 - Paste or enter a mathematical objective (formula).
 - Declare variables, domains, and control parameters.
@@ -11,7 +11,6 @@ Turn the PSO demo into a general-purpose optimizer app where users can:
 - Save and export reproducible experiments.
 
 ## Design priorities
-- Simplicity and polish — recruiter-friendly UI and demos.
 - Extensibility — easy to add new optimizers (plugin-style).
 - Safety and reproducibility for user-provided formulas.
 - Useful for engineers & researchers (experiment management, exports, comparisons).
@@ -57,7 +56,7 @@ UX extras:
 - Built-in templates (Rastrigin, Rosenbrock, Ackley, Sphere).
 - Sample value preview and sanity checks before running an optimizer.
 
-## Extensible optimizer architecture (recommended)
+## Extensible optimizer architecture:
 - Core Optimizer interface (Python):
 
   class OptimizerBase:
@@ -149,13 +148,13 @@ def register_optimizer(name):
 - CI: GitHub Actions
 - Container: Docker + docker-compose
 
-## Suggested roadmap (example)
-- Week 0: PSO refactor, tests, register PSO in registry.
-- Week 1: FastAPI endpoints, safe formula parsing, seeded demo endpoint, basic React UI.
-- Week 2: SSE streaming, run/export, experiment metadata storage.
-- Week 3: Background job queue, add DE and CMA-ES adapters, run comparison UI.
-- Week 4: Add gradient-based optimizers, projection visualizations.
-- Weeks 5+: Bayesian opt, NSGA-II, plugin docs, auth & deployment polish.
+## Suggested roadmap:
+- stage 0: PSO refactor, tests, register PSO in registry.
+- stage 1: FastAPI endpoints, safe formula parsing, seeded demo endpoint, basic React UI.
+- stage 2: SSE streaming, run/export, experiment metadata storage.
+- stage 3: Background job queue, add DE and CMA-ES adapters, run comparison UI.
+- stage 4: Add gradient-based optimizers, projection visualizations.
+- stage 5+: Bayesian opt, NSGA-II, plugin docs, auth & deployment polish.
 
 ## Getting started (local / demo)
 1. Clone the repo
@@ -171,6 +170,3 @@ def register_optimizer(name):
 - Add new optimizers under `backend/optimizers` and register them.
 - Add unit tests for optimizer correctness and reproducibility.
 - Keep formula parsing strict and safe; follow the sandboxing patterns in `backend/safety/*`.
-
-## License
-Specify a license (e.g., MIT). Add `LICENSE` file to the repo.
